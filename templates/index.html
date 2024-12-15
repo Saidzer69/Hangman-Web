@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu du Pendu</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Jeu du Pendu</h1>
+    <p>Mot : {{.MotAffiche}}</p>
+    <p>Essais restants : {{.Essais}}</p>
+    <form action="/hangman" method="post">
+        <input type="text" name="letter" maxlength="1" required>
+        <button type="submit">Deviner</button>
+    </form>
+    <p>Tentatives : {{.Tentatives}}</p>
+    <a href="/scoreboard">Voir le Tableau des Scores</a>
+</body>
+</html>
